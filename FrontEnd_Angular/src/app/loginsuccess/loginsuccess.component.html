@@ -1,0 +1,55 @@
+
+<nav class="navbar navbar-expand-sm bg-primary navbar-dark">
+   <ul class = "navbar-nav">
+       <li class = "nav-item">
+           <a routerLink="/searchProduct" routerLinkActive="active" class="nav-link" >Search Product</a>
+       </li>
+       <li class = "nav-item">
+           <a routerLink="/loginsuccess" routerLinkActive="active" class="nav-link" >Product List</a>
+       </li>
+       <li class = "nav-item">
+           <a routerLink="/addReview" routerLinkActive="active" class="nav-link" >Add Review</a>
+       </li>
+       <li> 
+           <button style="float: right; margin-right: 10px;" class="btn btn-danger" (click)="logoutUser()" class="btn btn-danger">LogOut</button>
+       </li>
+       <li><h3 style="color: black;background-color: white;">Hi {{loginedUserEmailId}}</h3>  </li>
+   </ul>
+</nav>
+
+<h4> Product List</h4>
+<table class = "table table-striped">
+    <thead>
+        <tr>
+            <th> Product Brand</th>
+            <th> Product Code </th>
+            <th> Product Name</th>
+            <th> Product Price</th>
+        </tr>
+    </thead>
+    <tbody>
+        <tr *ngFor = "let product of products" >
+            <td> {{ product.productBrand }} </td>
+            <td> {{ product.productCode }} </td>
+            <td> {{ product.productName }} </td>
+            <td>{{product.productPrice}}</td>
+        </tr>
+    </tbody>
+</table>
+
+
+
+
+<!-- <button class='btn btn-danger allign-right' routerLink="/login">Logout</button>
+   <div class="container mt-5">
+    
+ <mat-grid-list cols="3" rowHeight="2:2" gutterSize="10">
+      <mat-grid-tile>
+         1
+      </mat-grid-tile>
+      <mat-grid-tile>2</mat-grid-tile>
+      <mat-grid-tile>3</mat-grid-tile>
+      <mat-grid-tile>4</mat-grid-tile>
+   </mat-grid-list>
+</div>    
+ -->

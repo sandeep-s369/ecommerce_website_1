@@ -1,0 +1,79 @@
+<div>
+<nav class="navbar navbar-expand-sm bg-primary navbar-dark">
+    <ul class = "navbar-nav">
+        <li class = "nav-item">
+            <a routerLink="/searchProduct" routerLinkActive="active" class="nav-link" >Search Product</a>
+        </li>
+        <li class = "nav-item">
+            <a routerLink="/loginsuccess" routerLinkActive="active" class="nav-link" >Product List</a>
+        </li>
+        <li class = "nav-item">
+            <a routerLink="/addReview" routerLinkActive="active" class="nav-link" >Add Review</a>
+        </li>
+        <li>
+          <input style="float: right; margin-right: 10px;" type="button" class="btn btn-danger" value="LogOut"
+           routerLink="/login" routerLinkActive="active">
+         
+        </li>
+        <li><h3 style="color: black;background-color: white;">Hi {{loginedUserEmailId}}</h3>  </li>
+    </ul>
+ </nav>
+<br>
+
+
+<div class="container">
+    <div class="row">
+          <div class="col-lg-2 col-md-2 col-sm12 p-0">
+              <input type="text" placeholder="Enter a value" [(ngModel)]="searchString" > 
+          </div>
+          <div class="col-lg-2 col-md-2 col-sm12 p-0">
+              <button type="button" (click)="callProduct()">Search</button>
+          </div>
+    </div>
+    <br>
+    <div>
+        <h4><b> Product List</b></h4>
+        <table class = "table table-striped">
+          <thead>
+             <tr>
+                  <th> Product Brand</th>
+                  <th> Product Code </th>
+                  <th> Product Name</th>
+                  <th> Product Price</th>
+                  <th> View Reviews </th>
+             </tr>
+          </thead>
+          <tbody>
+              <tr *ngFor = "let product of products" >
+                  <td> {{ product.productBrand }} </td>
+                  <td> {{ product.productCode }} </td>
+                  <td> {{ product.productName }} </td>
+                  <td>{{product.productPrice}}</td>
+                  <td><button type="button" (click)="callReviews(product.productCode!)">View Reviews</button></td>
+              </tr>
+              
+           </tbody>
+        </table>
+
+    </div>    
+</div>
+
+
+
+
+
+<!--
+&nbsp;&nbsp;
+<div class="search-container align-center">
+       <span>Search:</span>
+       <input type="text">
+</div>
+
+
+<div class="navbar-nav ml-2">
+    <input type="text" #searchInput  class="form-control"
+        placeholder="Search books">
+    <button type="submit"  class="btn btn-primary ml-2">Search</button>
+</div>
+
+-->

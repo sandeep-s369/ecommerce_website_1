@@ -1,0 +1,39 @@
+
+<div class="col-md-6 offset-md-3">
+    <h3> Update Review </h3>
+    <form (ngSubmit) = "onSubmit()">
+    
+        <div class="form-group">
+            <label> Value</label>
+            <input type="text" class ="form-control" id = "value"
+                [(ngModel)] = "review.value" name = "value">
+        </div>
+    
+        <div class="form-group">
+            <label> User EmailId</label>
+            <input type="text" class ="form-control" id = "email"
+                [(ngModel)] = "review.emailId" name = "email">
+        </div>
+    
+        <div class="form-group">
+            <label> Product Code</label>
+            <input type="text" class ="form-control" id = "code"
+                [(ngModel)] = "review.productCode" name = "code">
+        </div>
+       
+        <div class="form-group">
+            <label> Product Rating</label>
+            <input type="text" class ="form-control" id = "rating"
+                [(ngModel)] = "review.rating" name = "rating">
+        </div>
+    
+        <div class="form-group">
+            <label> Product Review</label>
+            <input type="text" class ="form-control" id = "reviewProduct"
+                [(ngModel)] = "review.reviewProduct" name = "reviewProduct">
+        </div>
+
+        <button class = "btn btn-success" type ="submit">Submit</button>
+        <button class = "btn btn-danger" routerLink="/admin" routerLinkActive="active" type ="button">Back</button>
+    </form>
+    </div> 

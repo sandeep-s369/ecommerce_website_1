@@ -1,0 +1,49 @@
+<div class="container">
+
+<div>
+    <button style="float: right; margin-right: 10px;" class="btn btn-danger" (click)="logoutAdmin()" class="btn btn-danger">LogOut</button>
+</div>    
+<div>    
+<h4><b> Reviews List</b></h4>
+<table class = "table table-striped">
+    <thead>
+        <tr>
+            <th> Value</th>
+            <th> User EmailId</th>
+            <th> Product Code </th>
+            <th> Product Rating</th>
+            <th> Product Review</th>
+            <th> Actions</th>
+        </tr>
+    </thead>
+    <tbody>
+        <tr *ngFor = "let review of reviews" >
+            <td> {{ review.value }} </td>
+            <td> {{ review.emailId }} </td>
+            <td> {{ review.productCode }} </td>
+            <td> {{ review.rating }} </td>
+            <td>{{review.reviewProduct}}</td>
+            <td>
+                
+                    <button (click)="updateReview(review.id!)" class = "btn btn-info">Approve</button>
+             <!--   <button  class = "btn btn-danger" style="margin-left: 10px"> Delete</button> -->     
+                    
+                
+            </td>
+        </tr>
+    </tbody>
+</table>
+</div>
+
+
+
+
+
+</div>
+<!--
+<button class = "btn btn-danger" (click)="logoutAdmin()">Logout</button>
+<button style="float: right; margin-right: 10px;" class="btn btn-danger" (click)="logoutAdmin()" class="btn btn-danger">LogOut</button>
+
+-->
+
+

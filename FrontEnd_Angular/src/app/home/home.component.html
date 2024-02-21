@@ -1,0 +1,38 @@
+
+<div class="container">
+   
+<div class="col d-flex justify-content-center" style="margin-top: 12%;">
+    <div class="card text-center" style="width: 25rem; border: 0;">
+        <div class="card-body">
+           
+            <h2 class="card-title" style="background-color: yellow;">Ecommerce Login</h2>
+            <br>
+            <br>
+            <div class="d-flex justify-content-around">
+                <button mat-button type="button" routerLink="/login" routerLinkActive="active"
+                    style="background-color: greenyellow; color: black;;">User/New User</button>
+                <button mat-button type="button" routerLink="/adminLogin" routerLinkActive="active"
+                    style="background-color: red; color: white;">   Admin   </button>
+            </div>
+        </div>
+    </div>
+    
+</div>
+<div class="text-center">
+ <h3>   <span><p>Number of registered USERS : <b>{{totalUsers.length}} </b></p></span>  </h3>
+  <h3>  <span><p>Number of PRODUCTS : <b>{{totalProducts.length}}</b></p></span>  </h3>
+  <h3> <span><p>Number of REVIEWS : <b>{{totalReviews.length}}</b></p></span>   </h3>
+</div>
+<br>
+
+</div>
+
+
+
+<!--
+<div>
+    <img [src]="homePageImage" alt="homePageImage">
+</div>
+
+
+-->

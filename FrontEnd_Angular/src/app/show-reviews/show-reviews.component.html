@@ -1,0 +1,29 @@
+
+
+<button class = "btn btn-danger" routerLink="/searchProduct" routerLinkActive="active" type ="button">Back</button>
+<br>
+
+<h2>Avearge Rating : {{avg()}} </h2>
+<br>
+
+<h3><b> Product reviews</b></h3>
+        <table class = "table table-striped">
+          <thead>
+             <tr>
+                  <th> UserName</th>
+                  <th> Product Code </th>
+                  <th> Product Rating</th>
+                  <th> Product Review</th>
+                  
+             </tr>
+          </thead>
+          <tbody>
+              <tr *ngFor = "let review of Reviews" >
+                  <td> {{ review.emailId}} </td>
+                  <td> {{ review.productCode}} </td>
+                  <td> {{ review.rating }} </td>
+                  <td>{{review.reviewProduct}}</td>
+                 
+              </tr>
+           </tbody>
+        </table>
